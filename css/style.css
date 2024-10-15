@@ -5,8 +5,14 @@
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
+
 /* COMMON */
 /* Layout */
+
+/* MAIN */
 .wrapper{
     width: 100%;
     height: calc(100vh - 80px);
@@ -18,16 +24,92 @@
     background-color: aquamarine;
 }
 
-.big-wrapper{
-    width: 100%;
-    height: 100hv;
-}
-
 .option-col{
     width: 200px;
+    background-color: black;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+}
 
-    /* debug */
-    background-color: blue;
+.logo-small{
+    display: none;
+}
+
+.logo{
+    padding: 1rem 3rem 1rem 0;
+}
+
+.option-col ul{
+    list-style: none;
+    margin-bottom: 40px;
+    color: #595959;
+}
+
+.option-col ul img{
+    width: 40px;
+    vertical-align: middle;
+}
+
+.option-col ul span{
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.option-col li{
+    color: #595959;
+    margin-bottom: 10px;
+}
+
+.playlist-ul button{
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
+    margin-right: 5px;
+    font-size: 2rem;
+}
+
+.playlist-ul li:nth-child(1){
+    margin-top: 10px;
+}
+
+.download-user{
+    color: #595959;
+}
+
+.download-user img{
+    width: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.download-user span{
+    vertical-align: middle;
+}
+
+.line{
+    border: 1px solid #595959;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.user{
+    background-color: #a3a3a3;
+    border-radius: 50%;
+}
+
+.white{
+    color: white;
+}
+
+.border-green{
+    border-left: 3px solid chartreuse;
+}
+
+.option-col li:hover{
+    color: white;
+}
+
+.download-user span:hover{
+    color: white;
 }
 
 .music-col{
@@ -42,9 +124,63 @@
     height: calc(100% - 80px);
 }
 
+/* FOOTER */
 .footer{
     height: 80px;
 
     /* debug */
     background-color: coral;
+}
+
+/* *********** */
+/* RESPONSIVE */
+/* ********** */
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+}
+
+/* SMARTPHONE */
+@media screen and (max-width: 425px) {
+}
+
+/* SMARTPHONE XS */
+@media screen and (max-width: 320px) {
+    .option-col{
+        width: 50px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-small{
+        display: block;
+        width: 20px;
+        margin: 10px 10px 10px 0;
+    }
+
+    .option-ul span,
+    h4,
+    .playlist-ul,
+    .download-user span,
+    hr{
+        display: none;
+    }
+
+    .download-user img{
+        margin-bottom: 10px;
+    }
+
+    .border-green{
+        border: 0px;
+    }
+
+    .option-col ul img{
+        width: 20px;
+    }
+
+    .music-col{
+        width: calc(100% - 50px);
+    }
 }
