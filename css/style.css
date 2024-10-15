@@ -9,13 +9,18 @@
 /* Layout */
 .wrapper{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
 
     display: flex;
 
     /* debug */
     border: 1px solid black;
     background-color: aquamarine;
+}
+
+.big-wrapper{
+    width: 100%;
+    height: 100hv;
 }
 
 .option-col{
