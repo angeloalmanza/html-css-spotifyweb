@@ -11,8 +11,6 @@ img{
 
 /* COMMON */
 /* Layout */
-
-/* MAIN */
 .wrapper{
     width: 100%;
     height: calc(100vh - 80px);
@@ -24,11 +22,45 @@ img{
     background-color: aquamarine;
 }
 
+/* HEADER */
+.header{
+    height: 80px;
+    background-color: rgb(9, 11, 18, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    z-index: 9999;
+}
+
+.upgrade-button{
+    text-decoration: none;
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    position: absolute;
+    right: 20px;
+    top: 25%;
+}
+
+.upgrade-button:hover{
+    transform: scale(1.1);
+}
+
+/* MAIN */
+/* OPTION COL */
 .option-col{
     width: 200px;
     background-color: black;
-    padding-left: 1rem;
     font-size: 1.3rem;
+}
+
+.option-content{
+    height: calc(100vh - 80px);
+    position: relative;
 }
 
 .logo-small{
@@ -36,7 +68,7 @@ img{
 }
 
 .logo{
-    padding: 1rem 3rem 1rem 0;
+    padding: 1rem 3rem 1rem 1rem;
 }
 
 .option-col ul{
@@ -58,9 +90,14 @@ img{
 .option-col li{
     color: #595959;
     margin-bottom: 10px;
+    padding-left: 1rem;
 }
 
-.playlist-ul button{
+h4{
+    padding-left: 1rem;
+}
+
+.plus-button{
     width: 40px;
     height: 40px;
     background-color: #a3a3a3;
@@ -74,6 +111,11 @@ img{
 
 .download-user{
     color: #595959;
+    padding-left: 1rem;
+    position: absolute;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: 10px;
 }
 
 .download-user img{
@@ -112,16 +154,25 @@ img{
     color: white;
 }
 
+/* MUSIC COL */
 .music-col{
     width: calc(100% - 200px);
     overflow: auto;
-
-    /* debug */
-    background-color: chartreuse;
+    background-color: #141922;
 }
 
-.content{
-    height: calc(100% - 80px);
+.music-content{
+    height: calc(100vh - 80px);
+}
+
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    color: #595959;
+    padding-top: 100px;
 }
 
 /* FOOTER */
@@ -137,15 +188,15 @@ img{
 /* ********** */
 
 /* TABLET */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 }
 
 /* SMARTPHONE */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
 }
 
 /* SMARTPHONE XS */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
     .option-col{
         width: 50px;
     }
@@ -157,7 +208,7 @@ img{
     .logo-small{
         display: block;
         width: 20px;
-        margin: 10px 10px 10px 0;
+        margin: 1rem 3rem 1rem 1rem;
     }
 
     .option-ul span,
