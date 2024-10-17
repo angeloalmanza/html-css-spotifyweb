@@ -257,9 +257,165 @@ h4{
 /* FOOTER */
 .footer{
     height: 80px;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
 
-    /* debug */
-    background-color: coral;
+.song{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+}
+
+.song img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.song h5{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.song span{
+    color: #595959;
+    font-size: 0.8rem;
+}
+
+.song span:hover{
+    color: white;
+    text-decoration: underline;
+}
+.icon{
+    margin-left: 30px;
+}
+
+.icon i{
+    color: #595959;
+    padding-right: 10px;
+}
+
+.icon i:hover{
+    color: white;
+}
+
+.option-play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.icon-play{
+    display: flex;
+    align-items: center;
+}
+
+.icon-play i{
+    color: white;
+    padding: 0 10px;
+}
+
+.icon-centre{
+    font-size: 30px;
+}
+
+.icon-centre:hover{
+    transform: scale(1.1);
+}
+
+.minute{
+    height: 5px;
+    width: 400px;
+    position: relative;
+    background-color: #595959;
+}
+
+.minute-asc{
+    height: 5px;
+    width: 80px;
+    background-color: #a3a3a3;
+    position: relative;
+}
+
+.minute:hover .minute-asc{
+    background-color: chartreuse;
+}
+
+.minute:hover .minute-asc::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px; 
+    width: 15px; 
+    height: 15px; 
+    border-radius: 50%;
+    background-color:#a3a3a3 ;
+}
+
+.min-inizio{
+    position: absolute;
+    top: -7px;
+    left: -40px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.min-fine{
+    position: absolute;
+    top: -7px;
+    right: -40px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.option-song{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.icon-song{
+    display: flex;
+    align-items: center;
+}
+
+.icon-song i{
+    color: white;
+    padding: 0 10px;
+}
+
+.volume{
+    height: 5px;
+    width: 100px;
+    background-color: #595959;
+}
+
+.volume-active{
+    height: 5px;
+    width: 20px;
+    background-color: #a3a3a3;
+    position: relative;
+}
+
+.volume:hover .volume-active{
+    background-color: chartreuse;
+}
+
+.volume:hover .volume-active::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 15px; 
+    height: 15px; 
+    border-radius: 50%;
+    background-color:#a3a3a3 ;
 }
 
 /* *********** */
@@ -267,23 +423,47 @@ h4{
 /* ********** */
 
 /* TABLET */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 878px) {
     .col{
         width: calc(100% / 4);
         padding: 10px;
     }
+
+    .minute{
+        width: 300px;
+    }
+
+    .minute-asc{
+        width: 60px;
+    }
 }
 
 /* SMARTPHONE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 639px) {
     .col{
         width: calc(100% / 2);
         padding: 10px;
     }
+
+    .minute{
+        width: 200px;
+    }
+
+    .minute-asc{
+        width: 40px;
+    }
+
+    .volume{
+        width: 60px;
+    }
+
+    .volume-active{
+        width: 12px;
+    }
 }
 
 /* SMARTPHONE XS */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 552px) {
     /* HEADER */
     .header{
         width: calc(100% - 50px);
@@ -333,5 +513,13 @@ h4{
     .col{
         width: calc(100% / 2);
         padding: 10px;
+    }
+
+    .minute{
+        width: 100px;
+    }
+
+    .minute-asc{
+        width: 20px;
     }
 }
